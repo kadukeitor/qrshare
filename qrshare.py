@@ -71,7 +71,7 @@ if __name__ == "__main__":
         root.geometry('%dx%d' % (image.size[0], image.size[1]))
 
         tkpi = ImageTk.PhotoImage(image)
-        label_image = Tkinter.Label(root, image=tkpi, text="Hello, world!")
+        label_image = Tkinter.Label(root, image=tkpi)
         label_image.place(x=0, y=0, width=image.size[0], height=image.size[1])
 
         try:

@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-$ sudo apt-get install qrcode python-tk python-imaging-tk
+$ sudo apt-get install python-qrcode python-tk python-imaging-tk
 ```
 
 We recommend put the file in the PATH for his execution.

@@ -1,5 +1,7 @@
 # QrShare
 
+![Alt text](logo.png?raw=true "QrShare")
+
 ## Installation
 
 ```

@@ -5,8 +5,8 @@ from optparse import OptionParser
 import Tkinter
 import ImageTk
 import threading
+import BaseHTTPServer
 import SimpleHTTPServer
-import SocketServer
 import socket
 import fcntl
 import struct
@@ -52,9 +52,8 @@ if __name__ == "__main__":
         print "Get the file on " + url + f
         print "to finish close the QRCode or Ctrl+C"
 
-        Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-        httpd = SocketServer.TCPServer(("", opts.port), Handler)
         try:
+            httpd = BaseHTTPServer.HTTPServer(("", opts.port), SimpleHTTPServer.SimpleHTTPRequestHandler)
             thread_httpd = threading.Thread(target=httpd.serve_forever)
             thread_httpd.setdaemon = True
             thread_httpd.start()
